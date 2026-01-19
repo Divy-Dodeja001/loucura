@@ -104,9 +104,15 @@ export default function HomePage() {
       <div className="loucura-content">
         <div
           className="d-lg-none"
-          style={{ position: "absolute", left: "0", top: "-6%", zIndex: "-1" }}
+          style={{
+            position: "absolute",
+            left: "0",
+            top: "-6%",
+            zIndex: "-1",
+            overflow: "hidden",
+          }}
         >
-          <img src="/Vector3.png" />
+          <img src="/Vector3.png" className="img-fluid" />
         </div>
 
         {/* HERO */}
@@ -122,12 +128,17 @@ export default function HomePage() {
             <div className="text-light">on Lisbon&apos;s pink street</div>
 
             <div className="d-flex justify-content-center gap-2 my-4 flex-wrap">
-              <Link href="/" className="btn btn-light rounded-pill px-4">
+              <Link
+                href="/"
+                className="btn btn-light rounded-pill px-4"
+                style={{ fontWeight: 500 }}
+              >
                 Buy tickets
               </Link>
               <Link
                 href="/"
                 className="btn btn-outline-light rounded-pill px-4"
+                style={{ fontWeight: 500 }}
               >
                 Book a table
               </Link>
@@ -219,7 +230,11 @@ export default function HomePage() {
               </p>
 
               <div className="mt-4">
-                <Link href="/" className="btn btn-light rounded-pill px-4">
+                <Link
+                  href="/"
+                  className="btn btn-light rounded-pill px-4"
+                  style={{ fontWeight: 500 }}
+                >
                   Follow us
                 </Link>
               </div>
@@ -229,9 +244,15 @@ export default function HomePage() {
 
         <div
           className="d-lg-none"
-          style={{ position: "absolute", left: "0", top: "35%", zIndex: "-1" }}
+          style={{
+            position: "absolute",
+            left: "0",
+            top: "35%",
+            zIndex: "-1",
+            overflow: "hidden",
+          }}
         >
-          <img src="/Vector3.png" />
+          <img src="/Vector3.png" className="img-fluid" />
         </div>
 
         {/* THE EXPERIENCE */}
@@ -294,6 +315,7 @@ export default function HomePage() {
                   href="https://maps.app.goo.gl/b2Joupzvi7m3esSw9"
                   target="_blank"
                   className="btn btn-light rounded-pill px-4"
+                  style={{ fontWeight: 500 }}
                 >
                   Get directions
                 </Link>
@@ -423,7 +445,8 @@ function EventTile({ card }) {
         >
           <Link
             href="/"
-            className="btn btn-light rounded-pill px-3 py-2 fw-bold"
+            className="btn btn-light rounded-pill px-3 py-2"
+            style={{ fontWeight: 500 }}
           >
             Book Now
           </Link>
