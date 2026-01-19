@@ -5,7 +5,7 @@ import Link from "next/link";
 import { Icon } from "@iconify/react";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { motion } from "framer-motion";
 
 
@@ -50,7 +50,6 @@ const weeklyEvents = [
 ];
 
 const experienceImages = [
-  { desktop: "home/lifestyle1.jpg", mobile: "home/lifestyleM1.jpg" },
   { desktop: "home/lifestyle2.jpg", mobile: "home/lifestyleM2.jpg" },
   { desktop: "home/lifestyle3.jpg", mobile: "home/lifestyleM3.jpg" },
   { desktop: "home/lifestyle4.jpg", mobile: "home/lifestyleM4.jpg" },
@@ -73,34 +72,42 @@ export default function HomePage() {
   return (
     <main className="loucura-page">
       <div className="loucura-bg" aria-hidden="true" />
+      {/* NAVBAR */}
+      <header
+        className="py-3 position-sticky"
+        style={{
+          position: "sticky!important",
+          top: 0,
+          zIndex: 100,
+          backdropFilter: "blur(12px)",
+          background: "rgba(0,0,0,0.55)",
+          borderBottom: "1px solid rgba(255,255,255,0.08)",
+        }}
+      >
+        <div className="container d-flex align-items-center justify-content-between">
+          <Link href="/" className="text-decoration-none text-white">
+            <img
+              src="/logo.png"
+              style={{ width: "128px", height: "32px" }}
+            ></img>{" "}
+          </Link>
 
+          <Link
+            href="/"
+            className="btn btn-light rounded-pill px-4"
+            style={{ fontWeight: 500 }}
+          >
+            Book Now
+          </Link>
+        </div>
+      </header>
       <div className="loucura-content">
-        {/* NAVBAR */}
-        <header
-          className="py-3 position-sticky"
-          style={{
-            position: "sticky!important",
-            top: 0,
-            zIndex: 100,
-            backdropFilter: "blur(12px)",
-            background: "rgba(0,0,0,0.55)",
-            borderBottom: "1px solid rgba(255,255,255,0.08)",
-          }}
+        <div
+          className="d-lg-none"
+          style={{ position: "absolute", left: "0", top: "-6%", zIndex: "-1" }}
         >
-          <div className="container d-flex align-items-center justify-content-between">
-            <Link href="/" className="text-decoration-none text-white">
-              <img src="/logo.png" alt="Loucura" style={{ height: 36 }} />
-            </Link>
-
-            <Link
-              href="/"
-              className="btn btn-light rounded-pill px-4"
-              style={{ fontWeight: 500 }}
-            >
-              Book Now
-            </Link>
-          </div>
-        </header>
+          <img src="/Vector3.png" />
+        </div>
 
         {/* HERO */}
         <section className="container pt-4 pb-5 mb-lg-3">
@@ -128,9 +135,8 @@ export default function HomePage() {
           </div>
 
           {/* Big hero image */}
-          <div className="ff-card">
+          <div>
             <motion.div
-              className="ff-card"
               variants={zoomFade}
               initial="hidden"
               whileInView="visible"
@@ -145,7 +151,7 @@ export default function HomePage() {
                 <img
                   src="/home/HeroDesktop.jpg"
                   alt="hero"
-                  className="w-100 ff-img"
+                  className="w-100 ff-img ff-card"
                 />
               </picture>
             </motion.div>
@@ -157,10 +163,16 @@ export default function HomePage() {
           <h2 className=" text-center mb-4 mb-lg-5">WEEKLY EVENTS</h2>
 
           <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             navigation
             spaceBetween={16}
+            loop={true}
+            autoplay={{
+              delay: 2000, // 2 seconds
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             breakpoints={{
               0: { slidesPerView: 1.15 },
               576: { slidesPerView: 2.1 },
@@ -180,7 +192,10 @@ export default function HomePage() {
           <div className="row g-4 align-items-center justify-content-center">
             <div className="col-12 col-lg-8 text-center">
               <div className="ff-title mb-5">
-                <img src="/logo.png"></img>
+                <img
+                  src="/logo.png"
+                  style={{ width: "201px", height: "50px" }}
+                ></img>
               </div>
 
               <p
@@ -212,44 +227,52 @@ export default function HomePage() {
           </div>
         </section>
 
+        <div
+          className="d-lg-none"
+          style={{ position: "absolute", left: "0", top: "35%", zIndex: "-1" }}
+        >
+          <img src="/Vector3.png" />
+        </div>
+
         {/* THE EXPERIENCE */}
         <section className="container py-5 my-lg-3">
           <h2 className=" text-center mb-3">THE EXPERIENCE</h2>
 
           <Swiper
-            modules={[Pagination]}
+            modules={[Pagination, Autoplay]}
             pagination={{ clickable: true }}
             spaceBetween={16}
+            loop={true}
+            autoplay={{
+              delay: 2000, // 2 seconds
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
             slidesPerView={1}
             breakpoints={{
-              0: { slidesPerView: 1.05 },
-              992: { slidesPerView: 1 },
+              0: { slidesPerView: 1.3 },
+              992: { slidesPerView: 1.3, centeredSlides: true },
             }}
           >
             {experienceImages.map((src) => (
               <SwiperSlide key={src} className="pb-5">
-                <div
+                <motion.div
                   className="ff-card"
-                  style={{ height: "clamp(240px, 38vw, 520px)" }}
+                  variants={zoomFade}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 0.7, ease: "easeOut" }}
                 >
-                  <motion.div
-                    className="ff-card"
-                    variants={zoomFade}
-                    initial="hidden"
-                    whileInView="visible"
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.7, ease: "easeOut" }}
-                  >
-                    <picture>
-                      <source media="(max-width: 768px)" srcSet={src.mobile} />
-                      <img
-                        src={src.desktop}
-                        alt="hero"
-                        className="w-100 ff-img"
-                      />
-                    </picture>
-                  </motion.div>
-                </div>
+                  <picture>
+                    <source media="(max-width: 768px)" srcSet={src.mobile} />
+                    <img
+                      src={src.desktop}
+                      alt="hero"
+                      className="img-fluid rounded-5"
+                    />
+                  </picture>
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -267,11 +290,15 @@ export default function HomePage() {
 
               {/* redirect to home */}
               <div className="my-3 mb-4 d-flex justify-content-center">
-                <Link href="/" className="btn btn-light rounded-pill px-4">
+                <Link
+                  href="https://maps.app.goo.gl/b2Joupzvi7m3esSw9"
+                  target="_blank"
+                  className="btn btn-light rounded-pill px-4"
+                >
                   Get directions
                 </Link>
               </div>
-              <div className="ff-card" style={{ borderRadius: "24px" }}>
+              <div>
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3113.460490811069!2d-9.145907624072274!3d38.70723537176517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd193543e1185fbf%3A0x9acbe17f18b6e082!2sLoucura!5e0!3m2!1sen!2sin!4v1768813082770!5m2!1sen!2sin"
                   width="100%"
@@ -279,6 +306,7 @@ export default function HomePage() {
                   style={{ border: 0 }}
                   allowFullScreen
                   loading="lazy"
+                  className="ff-card"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Loucura Location Map"
                 />
@@ -293,7 +321,10 @@ export default function HomePage() {
             <div className="d-flex flex-column flex-md-row gap-4 justify-content-between">
               <div>
                 <div className="ff-title mb-3">
-                  <img src="/logo.png"></img>
+                  <img
+                    src="/logo.png"
+                    style={{ width: "128px", height: "32px" }}
+                  ></img>
                 </div>
                 <div className="text-light">
                   Loucura bar and club. Live the madness
@@ -376,7 +407,7 @@ function EventTile({ card }) {
         variants={fadeUp}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.35 }}
+        viewport={{ once: true, amount: 0.1 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         {card.tag && <div className="ff-pill text-light">{card.tag}</div>}
