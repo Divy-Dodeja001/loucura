@@ -140,10 +140,10 @@ export default function HomePage() {
               <picture>
                 <source
                   media="(max-width: 768px)"
-                  srcSet="/home/heroMobile.jpg"
+                  srcSet="/home/HeroMobile.jpg"
                 />
                 <img
-                  src="/home/heroDesktop.jpg"
+                  src="/home/HeroDesktop.jpg"
                   alt="hero"
                   className="w-100 ff-img"
                 />
