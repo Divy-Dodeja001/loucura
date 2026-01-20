@@ -116,11 +116,11 @@ export default function HomePage() {
         </div>
 
         {/* HERO */}
-        <section className="container pt-4 pb-5 mb-lg-3">
-          <div className="text-center mb-3">
+        <section className="container pt-4 pb-5 mb-3">
+          <div className="text-center py-5">
             <div
               className="text-light mb-3"
-              style={{ fontSize: 12, letterSpacing: "0.2em" }}
+              style={{ fontSize: 14, letterSpacing: "0.3em" }}
             >
               LOUCURA BAR AND CLUB
             </div>
@@ -171,7 +171,7 @@ export default function HomePage() {
 
         {/* WEEKLY EVENTS */}
         <section className="container py-5 my-lg-3">
-          <h2 className=" text-center mb-4 mb-lg-5">WEEKLY EVENTS</h2>
+          <h2 className=" text-center mb-5">WEEKLY EVENTS</h2>
 
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -199,7 +199,7 @@ export default function HomePage() {
         </section>
 
         {/* ABOUT */}
-        <section className="container py-5 my-lg-3">
+        <section className="container py-5 my-3">
           <div className="row g-4 align-items-center justify-content-center">
             <div className="col-12 col-lg-8 text-center">
               <div className="ff-title mb-5">
@@ -211,7 +211,7 @@ export default function HomePage() {
 
               <p
                 className="text-light px-3 mb-3"
-                style={{ maxWidth: 760, margin: "0 auto", fontSize: "1.4em" }}
+                style={{ maxWidth: 760, margin: "0 auto", fontSize: "1.3em" }}
               >
                 Located in the heart of Pink Street, every night offers
                 something fresh at Loucura. Curated events, standout artists,
@@ -222,7 +222,7 @@ export default function HomePage() {
                 style={{
                   maxWidth: 760,
                   margin: "0.75rem auto 0",
-                  fontSize: "1.4em",
+                  fontSize: "1.3em",
                 }}
               >
                 With refined drinks and inviting shisha nights, Loucura is where
@@ -256,8 +256,8 @@ export default function HomePage() {
         </div>
 
         {/* THE EXPERIENCE */}
-        <section className="container py-5 my-lg-3">
-          <h2 className=" text-center mb-3">THE EXPERIENCE</h2>
+        <section className="container py-5 my-3">
+          <h2 className=" text-center mb-5">THE EXPERIENCE</h2>
 
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -300,17 +300,17 @@ export default function HomePage() {
         </section>
 
         {/* FIND US */}
-        <section className="container py-5 my-lg-3">
+        <section className="container py-5 my-3">
           <div className="d-flex align-items-center justify-content-center">
             <div className="w-100">
-              <h2 className=" mb-2 text-center">FIND US</h2>
+              <h2 className=" mb-4 text-center">FIND US</h2>
               <div className="text-light text-center">
                 R Nova do Carvalho 24, Lisbon <br />
                 Fri–Sun: 12 AM – 6 AM
               </div>
 
               {/* redirect to home */}
-              <div className="my-3 mb-4 d-flex justify-content-center">
+              <div className="my-3 mb-4 d-flex justify-content-center mb-5">
                 <Link
                   href="https://maps.app.goo.gl/b2Joupzvi7m3esSw9"
                   target="_blank"
