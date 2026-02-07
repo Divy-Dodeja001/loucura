@@ -200,3 +200,45 @@ a{
   font-weight: 800;
   text-decoration: underline!important;
 }
+
+
+/* White hamburger icon */
+.nav-hamburger {
+  display: inline-block;
+  width: 22px;
+  height: 14px;
+  position: relative;
+  background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92));
+  background-size: 22px 2px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.nav-hamburger::before,
+.nav-hamburger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 22px;
+  height: 2px;
+  background: rgba(255,255,255,0.92);
+  border-radius: 999px;
+}
+
+.nav-hamburger::before { top: 2px; }
+.nav-hamburger::after { bottom: 2px; }
+
+/* Mobile nav links */
+.mobile-nav-item {
+  display: block;
+  padding: 12px 12px;
+  text-decoration: none;
+  color: rgba(255,255,255,0.92);
+  font-weight: 600;
+  transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.mobile-nav-item:hover {
+  transform: translateY(-1px);
+  background: rgba(255,255,255,0.10);
+}

@@ -21,27 +21,27 @@ const navLinks = [
 const weeklyEvents = [
   {
     tag: "Monday",
-    href: "/", // redirect to home
+    href: "/events/monday", // redirect to home
     image: "/home/event1.jpg",
   },
   {
     tag: "Wednesday",
-    href: "/",
+    href: "/events/wednesday",
     image: "/home/event2.png",
   },
   {
     tag: "Thursday",
-    href: "/",
+    href: "/events/thursday",
     image: "/home/event3.png",
   },
   {
     tag: "Friday",
-    href: "/",
+    href: "/events/friday",
     image: "/home/event4.png",
   },
   {
     tag: "Saturday",
-    href: "/",
+    href: "/events/saturday",
     image: "/home/event5.png",
   },
 ];
@@ -67,8 +67,8 @@ const zoomFade = {
 export default function HomePage() {
   return (
     <main className="loucura-page">
-        <div className="events-bg" />
-      <Navbar/>      
+      <div className="events-bg" />
+      <Navbar />
       <div className="loucura-content">
         <div
           className="d-lg-none"
@@ -87,18 +87,22 @@ export default function HomePage() {
         <section className="container hero-section pt-4 pb-5 mb-3">
           <div className="text-center py-5">
             <div className="text-light mb-3 mb-md-4 section-title">
-              <p className="section-title__text m-0" style={{ fontSize: "18px" }}>LOUCURA BAR AND CLUB</p>
+              <p
+                className="section-title__text m-0"
+                style={{ fontSize: "18px" }}
+              >
+                LOUCURA BAR AND CLUB
+              </p>
             </div>
-            <h1 className="mb-md-3 mb-2 font-blaster text-light">FEEL THE PASSION</h1>
+            <h1 className="mb-md-3 mb-2 font-blaster text-light">
+              FEEL THE PASSION
+            </h1>
             <div className="text-light mb-4">
-              <p  style={{ fontSize: "18px" }}>on Lisbon&apos;s pink street</p>
+              <p style={{ fontSize: "18px" }}>on Lisbon&apos;s pink street</p>
             </div>
 
             <div className="d-flex justify-content-center gap-2 flex-wrap">
-              <Link
-                href="/"
-                className="rounded-pill cta-btn"
-              >
+              <Link href="/" className="rounded-pill cta-btn">
                 Buy Tickets
               </Link>
             </div>
@@ -159,8 +163,11 @@ export default function HomePage() {
         </section>
 
         {/* ABOUT */}
-        <section className="container py-5 my-3 about-us-section" >
-          <div className="row g-4 align-items-center justify-content-center " id="about">
+        <section className="container py-5 my-3 about-us-section">
+          <div
+            className="row g-4 align-items-center justify-content-center "
+            id="about"
+          >
             <div className="col-12 col-lg-8 text-center">
               <div className="ff-title mb-5">
                 <img src="/logo.png"></img>
@@ -322,7 +329,7 @@ export default function HomePage() {
         </section>
 
         {/* FOOTER */}
-        <Footer/>
+        <Footer />
       </div>
     </main>
   );
@@ -344,7 +351,9 @@ function EventTile({ card }) {
       >
         {card.tag && <div className="ff-pill text-light">{card.tag}</div>}
 
-        <img className="ff-img rounded-5 mb-3" src={card.image} alt="Event" />
+        <Link href={card.href}>
+          <img className="ff-img rounded-5 mb-3" src={card.image} alt="Event" />
+        </Link>
         <div className="w-100">
           <Link
             href="/"

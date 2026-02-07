@@ -211,7 +211,7 @@ export default async function Page({ params }) {
                 </a>
                 <Link
                   href="/events"
-                  className="btn btn-outline-light rounded-pill px-4 py-2"
+                  className="btn btn-dark rounded-pill px-4 py-2"
                 >
                   Back to Events
                 </Link>
