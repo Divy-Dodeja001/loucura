@@ -22,7 +22,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${ltwave.variable} ${blaster.variable}`}>
       <head>
         {/* Bootstrap CSS */}
         <link
@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
       </head>
-      <body className={`${ltwave.variable} ${blaster.variable}`}>
+      <body className="font-ltwave">
         {children}
         <script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

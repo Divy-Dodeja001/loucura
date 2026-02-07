@@ -27,11 +27,6 @@ body {
   padding: 0;
 }
 
-:root {
-  --font-blaster: "Blaster", sans-serif;
-  --font-ltwave: "LT Wave", serif;
-}
-
 .font-blaster {
   font-family: var(--font-blaster), serif;
 }
@@ -160,4 +155,48 @@ body {
 }
  .swiper-pagination-bullet-active {
   background-color: white!important; /* full white */
+}
+
+.events-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(900px 560px at 18% 18%, rgba(75, 16, 144, 0.35), transparent 60%),
+    radial-gradient(820px 540px at 78% 26%, rgba(241, 0, 129, 0.22), transparent 62%),
+    radial-gradient(900px 620px at 55% 78%, rgba(254, 138, 53, 0.14), transparent 62%),
+    radial-gradient(760px 520px at 36% 75%, rgba(254, 106, 94, 0.12), transparent 62%),
+    linear-gradient(180deg, #0b0712 0%, #020203 100%);
+  filter: saturate(1.05);
+}
+
+header {
+  img {
+    width: 180px;
+    height: 45px;
+  }
+}
+
+.cta-btn {
+  padding: 10px 30px !important;
+  font-size: 18px;
+  background-color: white !important;
+  color: black !important;
+  text-decoration: none;
+  border: 1px solid white!important;
+}
+
+.cta-btn:hover {
+  background-color: black !important;
+  color: white !important;
+}
+
+a{
+  color: inherit!important;
+  text-decoration: none!important;
+}
+
+.nav-link:hover{
+  font-weight: 800;
+  text-decoration: underline!important;
 }

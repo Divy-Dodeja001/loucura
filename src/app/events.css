@@ -1,0 +1,425 @@
+/* =========================
+   EVENTS PAGE (BOOTSTRAP CDN CLASSES)
+   Paste into globals.css
+========================= */
+
+/* Background palette:
+   #4B1090 electric purple
+   #F10081 neon pink
+   #FE8A35 vibrant orange
+   #FE6A5E neon coral
+   #020203 midnight black
+*/
+
+.events-page {
+  min-height: 100vh;
+  color: #fff;
+}
+
+/* Optional: subtle grain */
+.events-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+  opacity: 0.07;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* ---------- Header ---------- */
+.events-kicker {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.events-title {
+  font-size: clamp(34px, 4vw, 56px);
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.events-sub {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
+/* ---------- Month filter slider ---------- */
+.events-filter {
+  width: min(560px, 92vw);
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.events-filter::-webkit-scrollbar {
+  display: none;
+}
+
+.events-filter-btn {
+  border: 0;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.88);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  white-space: nowrap;
+  transition: transform 0.15s ease, background 0.2s ease, color 0.2s ease;
+}
+
+.events-filter-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.events-filter-btn.is-active {
+  background: #fff;
+  color: #020203;
+  font-weight: 800;
+}
+
+/* ---------- Card ---------- */
+.event-card {
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+}
+
+.event-media {
+  position: relative;
+  height: 210px;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.event-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+}
+
+/* Badges */
+.event-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.65);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.event-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 6px 10px;
+  font-size: 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Body */
+.event-body {
+  padding: 18px;
+}
+
+.event-top {
+  display: grid;
+  grid-template-columns: 92px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+/* Date block (visual hierarchy) */
+.event-date {
+  border-radius: 18px;
+  padding: 12px 10px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+}
+
+.event-date__dow {
+  font-size: 16px;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+}
+
+.event-date__text {
+  font-size: 12px;
+  margin-top: 2px;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Text */
+.event-name {
+  font-size: 16px;
+  font-weight: 900;
+  line-height: 1.2;
+}
+
+.event-theme {
+  margin-top: 6px;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.78);
+}
+
+/* Info rows */
+.event-info {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.14);
+  display: grid;
+  gap: 10px;
+}
+
+.event-line {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 10px;
+  align-items: start;
+}
+
+.event-label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.event-value {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* CTA */
+.event-cta {
+  border-radius: 999px !important;
+  padding: 12px 14px !important;
+}
+
+/* Responsive */
+@media (max-width: 576px) {
+  .event-media {
+    height: 190px;
+  }
+  .event-top {
+    grid-template-columns: 86px 1fr;
+  }
+}
+
+
+/* =========================
+   EVENT SLUG PAGE STYLES
+   Paste into globals.css
+========================= */
+
+/* Same palette vibes as your events listing */
+/* =========================
+   EVENT SLUG PAGE STYLES
+   Paste into globals.css
+========================= */
+
+/* Same palette vibes as your events listing */
+.eventslug-page {
+  min-height: 100vh;
+  color: #fff;
+  position: relative;
+}
+
+.eventslug-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(900px 560px at 18% 18%, rgba(75, 16, 144, 0.28), transparent 60%),
+    radial-gradient(820px 540px at 78% 26%, rgba(241, 0, 129, 0.18), transparent 62%),
+    radial-gradient(900px 620px at 55% 78%, rgba(254, 138, 53, 0.10), transparent 62%),
+    radial-gradient(760px 520px at 36% 75%, rgba(254, 106, 94, 0.09), transparent 62%),
+    linear-gradient(180deg, #0b0712 0%, #020203 100%);
+}
+
+/* Optional subtle grain */
+.eventslug-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)' opacity='.25'/%3E%3C/svg%3E");
+  opacity: 0.06;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* ---------- TOP HEADER ---------- */
+.events-header {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.events-pill {
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(10px);
+}
+
+.events-pill__dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+}
+
+.events-pill__text {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.eventslug-title {
+  font-size: clamp(34px, 4.2vw, 64px);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.eventslug-sub {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------- STICKY BANNER STACKING ---------- */
+/* This is the "stack up" effect: banner stays sticky under the header while you scroll */
+.eventslug-sticky {
+  position: sticky;
+  top: 50px;                 /* distance from top */
+  z-index: 0;
+}
+
+/* Banner shape like screenshot (big rounded card) */
+.eventslug-banner {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: min(62vh, 540px);
+  border-radius: 36px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: 0 24px 70px rgba(0,0,0,0.35);
+}
+
+/* Image */
+.eventslug-banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transform: scale(1.02);
+  filter: saturate(1.02);
+}
+
+/* Soft shade to keep text readable if you ever overlay */
+.eventslug-banner__shade {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(800px 500px at 20% 20%, rgba(0,0,0,0.35), transparent 60%),
+    linear-gradient(180deg, rgba(0,0,0,0.10), rgba(0,0,0,0.25));
+  pointer-events: none;
+}
+
+/* ---------- DESCRIPTION CARD ---------- */
+.eventslug-copycard {
+  border-radius: 28px;
+  padding: 22px;
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(52px);
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.30);
+}
+
+/* Meta rows */
+.eventslug-meta {
+  display: grid;
+  gap: 10px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.eventslug-meta__row {
+  display: grid;
+  grid-template-columns: 72px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.eventslug-meta__label {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.eventslug-meta__value {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+/* Copy formatting */
+.event-minihead {
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0 0 8px 0;
+}
+
+.event-paragraph {
+  font-size: 14px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.events-buybtn {
+  padding: 14px 16px !important;
+}
+
+.events-fineprint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 576px) {
+  .eventslug-banner {
+    height: min(54vh, 420px);
+    border-radius: 26px;
+  }
+  .eventslug-copycard {
+    padding: 18px;
+    border-radius: 22px;
+  }
+  .eventslug-meta__row {
+    grid-template-columns: 64px 1fr;
+  }
+}
