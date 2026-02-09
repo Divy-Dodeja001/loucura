@@ -68,7 +68,7 @@ LATIN HOUSE: Deep grooves and high-energy tribal beats.`,
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/thursday",
-    image: {mobile:"/home/event3.png",desktop:"/home/event3D.png"},
+    image: {mobile:"/home/event3M.png",desktop:"/home/event3D.png"},
     heading: "GLOW & FLOW PARTY",
     description: `THE PRE-GAME: GLOW & FLOW PARTY
 The night begins under the neon lights. The Pre-Game is our signature "Glow & Flow" takeover. A high-vibe social where the atmosphere is electric and the drinks are flowing. Step into the light and let the energy build as we prep for the main event.
@@ -92,7 +92,7 @@ Find your glow at the Pre-Game, then lose yourself in the relentless rhythm of I
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/friday",
-    image: {mobile:"/home/event4.png",desktop:"/home/event4D.png"},
+    image: {mobile:"/home/event4M.png",desktop:"/home/event4D.png"},
     heading: "AMERICAN HOUSE PARTY",
     description: `THE PRE-GAME: AMERICAN HOUSE PARTY
 We’re bringing the frat house to the club. The Pre-Game is a nostalgic, high-energy throwback to the best house parties you’ve ever seen. It’s the perfect excuse to round up the crew, grab a drink, and dominate the tables in Beer Pong, Flip Cup and Twister before the club kicks into high gear. Compete for bragging rights and get the adrenaline pumping before the main event begins.
@@ -117,7 +117,7 @@ Win the game at the Pre-Game, then lose your mind at Everything Goes. This is ex
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/saturday",
-    image: {mobile:"/home/event5.png",desktop:"/home/event5D.png"},
+    image: {mobile:"/home/event5M.png",desktop:"/home/event5D.png"},
     heading: "TAT ME UP!",
     description: `THE PRE-GAME: TAT ME UP!
 The night begins with a statement. The Pre-Game is our "Tat Me Up!". A bold, high-energy session where the ink and the drinks flow in equal measure. It’s the perfect excuse to round up the crew, grab a drink and get marked for the night before the club kicks into high gear. Whether you’re looking for a fresh design or just the high-octane atmosphere, this is where the Saturday story starts.
