@@ -321,11 +321,7 @@
   z-index: 1;
   width: 100%;
   height: min(62vh, 540px);
-  border-radius: 36px;
   overflow: hidden;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 24px 70px rgba(0,0,0,0.35);
 }
 
 /* Image */
@@ -350,12 +346,10 @@
 
 /* ---------- DESCRIPTION CARD ---------- */
 .eventslug-copycard {
-  border-radius: 28px;
   padding: 22px;
-  background: rgba(255, 255, 255, 0.10);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  backdrop-filter: blur(52px);
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.30);
+  /* backdrop-filter: blur(52px); */
+  background: transparent;
+  z-index: 4;
 }
 
 /* Meta rows */
@@ -374,20 +368,20 @@
 }
 
 .eventslug-meta__label {
-  font-size: 11px;
+  font-size: 16px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
 }
 
 .eventslug-meta__value {
-  font-size: 14px;
+  font-size: 16px;
   color: rgba(255, 255, 255, 0.92);
 }
 
 /* Copy formatting */
 .event-minihead {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 900;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -395,7 +389,7 @@
 }
 
 .event-paragraph {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.86);
 }
@@ -412,12 +406,10 @@
 /* ---------- Responsive ---------- */
 @media (max-width: 576px) {
   .eventslug-banner {
-    height: min(54vh, 420px);
-    border-radius: 26px;
+    height: 100%;
   }
   .eventslug-copycard {
     padding: 18px;
-    border-radius: 22px;
   }
   .eventslug-meta__row {
     grid-template-columns: 64px 1fr;

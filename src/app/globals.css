@@ -162,10 +162,10 @@ body {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(900px 560px at 18% 18%, rgba(75, 16, 144, 0.35), transparent 60%),
-    radial-gradient(820px 540px at 78% 26%, rgba(241, 0, 129, 0.22), transparent 62%),
-    radial-gradient(900px 620px at 55% 78%, rgba(254, 138, 53, 0.14), transparent 62%),
-    radial-gradient(760px 520px at 36% 75%, rgba(254, 106, 94, 0.12), transparent 62%),
+    radial-gradient(900px 560px at 10% 10%, rgba(75, 16, 144, 0.4), transparent 90%),
+    radial-gradient(820px 540px at 78% 30%, rgba(241, 0, 129, 0.22), transparent 90%),
+    radial-gradient(900px 820px at 10% 55%, rgba(254, 138, 53, 0.2), transparent 90%),
+    radial-gradient(760px 520px at 70% 80%, rgba(254, 106, 94, 0.3), transparent 90%),
     linear-gradient(180deg, #0b0712 0%, #020203 100%);
   filter: saturate(1.05);
 }

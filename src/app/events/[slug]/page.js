@@ -156,7 +156,7 @@ function formatCopy(text) {
           <>
             <h3 className="event-minihead">{first}</h3>
             {lines.slice(1).map((ln, idx) => (
-              <p key={idx} className="event-paragraph mb-2">
+              <p key={idx} className="event-paragraph mb-4">
                 {ln}
               </p>
             ))}
@@ -186,7 +186,7 @@ export default async function Page({ params }) {
         <div className="eventslug-bg" />
 
         <section className="eventslug-page position-relative">
-          <div className="container position-relative py-5">
+          <div className="position-relative py-5">
             {/* TOP: heading + CTA (stays above banner at start) */}
             <div className="text-center events-header py-5 my-5 eventslug-sticky">
               <div className="d-inline-flex align-items-center justify-content-center gap-2 events-pill mb-3">
@@ -219,46 +219,46 @@ export default async function Page({ params }) {
             </div>
 
             {/* STICKY BANNER: on scroll, it "stacks" under header */}
-            <div className=" mt-4" style={{ position: "relative", zIndex: 1 }}>
+            <div className="container mt-4 py-3" style={{ position: "relative", zIndex: 1 }}>
               <div className="eventslug-bg rounded-5" />
-              <div className="eventslug-banner mb-4">
+              <div className="eventslug-banner mb-4 rounded-5">
                 <img
                   src={event.image}
                   alt={event.eventName}
-                  className="eventslug-banner__img"
+                  className="eventslug-banner__img rounded-5"
                 />
                 <div className="eventslug-banner__shade" />
               </div>
               {/* CONTENT: description below */}
               <div className="row justify-content-center">
-                <div className="col-12 col-lg-9 col-xl-8">
-                  <div className="eventslug-copycard mt-4">
-                    <div className="eventslug-meta mb-3">
-                      <div className="eventslug-meta__row">
+                <div className="col-12 col-lg-9 col-xl-8" style={{zIndex:3}}>
+                  <div className="px-4 mt-4">
+                    <div className="mb-3">
+                      <div className="eventslug-meta__row mb-2">
                         <span className="eventslug-meta__label">Night</span>
                         <span className="eventslug-meta__value">
                           {event.eventName}
                         </span>
                       </div>
-                      <div className="eventslug-meta__row">
+                      <div className="eventslug-meta__row mb-2">
                         <span className="eventslug-meta__label">Theme</span>
                         <span className="eventslug-meta__value">
                           {event.theme}
                         </span>
                       </div>
-                      <div className="eventslug-meta__row">
+                      <div className="eventslug-meta__row mb-2">
                         <span className="eventslug-meta__label">Genres</span>
                         <span className="eventslug-meta__value">
                           {event.genres}
                         </span>
                       </div>
-                      <div className="eventslug-meta__row">
+                      <div className="eventslug-meta__row mb-2">
                         <span className="eventslug-meta__label">Time</span>
                         <span className="eventslug-meta__value">
                           {event.timeRange}
                         </span>
                       </div>
-                      <div className="eventslug-meta__row">
+                      <div className="eventslug-meta__row mb-4">
                         <span className="eventslug-meta__label">Entry</span>
                         <span className="eventslug-meta__value">
                           {event.entryInfo}
@@ -266,7 +266,7 @@ export default async function Page({ params }) {
                       </div>
                     </div>
 
-                    <div className="eventslug-copy">
+                    <div className="eventslug-copy py-4">
                       {formatCopy(event.description)}
                     </div>
 

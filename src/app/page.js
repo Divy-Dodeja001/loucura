@@ -70,7 +70,7 @@ export default function HomePage() {
       <div className="events-bg" />
       <Navbar />
       <div className="loucura-content">
-        <div
+        {/* <div
           className="d-lg-none"
           style={{
             position: "absolute",
@@ -81,7 +81,7 @@ export default function HomePage() {
           }}
         >
           <img src="/Vector3.png" className="img-fluid" />
-        </div>
+        </div> */}
 
         {/* HERO */}
         <section className="container hero-section pt-4 pb-5 mb-3">
@@ -206,7 +206,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <div
+        {/* <div
           className="d-lg-none"
           style={{
             position: "absolute",
@@ -217,7 +217,7 @@ export default function HomePage() {
           }}
         >
           <img src="/Vector3.png" className="img-fluid" />
-        </div>
+        </div> */}
 
         {/* THE EXPERIENCE */}
         <section className="py-5 my-3">
@@ -263,7 +263,7 @@ export default function HomePage() {
           </Swiper>
         </section>
 
-        <div
+        {/* <div
           className="d-lg-none"
           style={{
             position: "absolute",
@@ -274,7 +274,7 @@ export default function HomePage() {
           }}
         >
           <img src="/Vector3.png" className="img-fluid" />
-        </div>
+        </div> */}
 
         {/* FIND US */}
         <section className="container py-5">
