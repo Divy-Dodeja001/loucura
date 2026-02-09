@@ -20,7 +20,7 @@ const weeklyEvents = [
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/monday",
-    image: {mobile:"/home/event1M.jpg", desktop:"/home/event1D.jpg"},
+    image: {mobile:"/home/event1M.jpg", desktop:"/home/event1D.png"},
     heading: "KARAOKE MONDAYS",
     description: `THE PRE-GAME: KARAOKE MONDAYS
 The night begins with you center stage. The Pre-Game is our high-energy Karaoke takeover where the drinks are cold and the mic is hot. It's the perfect excuse to round up the crew, grab a drink and belt out those guilty pleasures before the club kicks into high gear. No judgment, just pure, unadulterated fun to set the tone for the night ahead.

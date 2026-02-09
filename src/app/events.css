@@ -102,7 +102,6 @@
 
 .event-media {
   position: relative;
-  height: 210px;
   background: rgba(0, 0, 0, 0.25);
 }
 
@@ -219,7 +218,6 @@
 /* Responsive */
 @media (max-width: 576px) {
   .event-media {
-    height: 190px;
   }
   .event-top {
     grid-template-columns: 86px 1fr;
