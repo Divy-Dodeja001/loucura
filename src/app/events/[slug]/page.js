@@ -20,7 +20,7 @@ const weeklyEvents = [
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/monday",
-    image: "/home/event1.jpg",
+    image: {mobile:"/home/event1M.jpg", desktop:"/home/event1D.jpg"},
     heading: "KARAOKE MONDAYS",
     description: `THE PRE-GAME: KARAOKE MONDAYS
 The night begins with you center stage. The Pre-Game is our high-energy Karaoke takeover where the drinks are cold and the mic is hot. It's the perfect excuse to round up the crew, grab a drink and belt out those guilty pleasures before the club kicks into high gear. No judgment, just pure, unadulterated fun to set the tone for the night ahead.
@@ -45,7 +45,7 @@ Warm up your vocal cords at the Pre-Game, then lose yourself in the nostalgia of
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/wednesday",
-    image: "/home/event2.png",
+    image: {mobile:"/home/event2M.png",desktop:"/home/event2D.png"},
     heading: "F*CK, MARRY, KILL",
     description: `THE PRE-GAME: F*CK, MARRY, KILL
 Midweek madness starts here. The Pre-Game brings you our infamous "F*ck, Marry, Kill" night- the ultimate interactive icebreaker. It’s the perfect excuse to round up the crew, grab a drink, and dive into the chaos of the game before the club kicks into high gear. Whether you’re playing along with the crowd or just watching the drama unfold, it’s the flavour your Wednesday needs.
@@ -68,7 +68,7 @@ LATIN HOUSE: Deep grooves and high-energy tribal beats.`,
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/thursday",
-    image: "/home/event3.png",
+    image: {mobile:"/home/event3.png",desktop:"/home/event3D.png"},
     heading: "GLOW & FLOW PARTY",
     description: `THE PRE-GAME: GLOW & FLOW PARTY
 The night begins under the neon lights. The Pre-Game is our signature "Glow & Flow" takeover. A high-vibe social where the atmosphere is electric and the drinks are flowing. Step into the light and let the energy build as we prep for the main event.
@@ -92,7 +92,7 @@ Find your glow at the Pre-Game, then lose yourself in the relentless rhythm of I
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/friday",
-    image: "/home/event4.png",
+    image: {mobile:"/home/event4.png",desktop:"/home/event4D.png"},
     heading: "AMERICAN HOUSE PARTY",
     description: `THE PRE-GAME: AMERICAN HOUSE PARTY
 We’re bringing the frat house to the club. The Pre-Game is a nostalgic, high-energy throwback to the best house parties you’ve ever seen. It’s the perfect excuse to round up the crew, grab a drink, and dominate the tables in Beer Pong, Flip Cup and Twister before the club kicks into high gear. Compete for bragging rights and get the adrenaline pumping before the main event begins.
@@ -117,7 +117,7 @@ Win the game at the Pre-Game, then lose your mind at Everything Goes. This is ex
     timeRange: "Pre-Game 8PM–11PM • Club 11PM–Late",
     entryInfo: "Entry info at door",
     href: "/events/saturday",
-    image: "/home/event5.png",
+    image: {mobile:"/home/event5.png",desktop:"/home/event5D.png"},
     heading: "TAT ME UP!",
     description: `THE PRE-GAME: TAT ME UP!
 The night begins with a statement. The Pre-Game is our "Tat Me Up!". A bold, high-energy session where the ink and the drinks flow in equal measure. It’s the perfect excuse to round up the crew, grab a drink and get marked for the night before the club kicks into high gear. Whether you’re looking for a fresh design or just the high-octane atmosphere, this is where the Saturday story starts.
@@ -219,19 +219,28 @@ export default async function Page({ params }) {
             </div>
 
             {/* STICKY BANNER: on scroll, it "stacks" under header */}
-            <div className="container mt-4 py-3" style={{ position: "relative", zIndex: 1 }}>
+            <div
+              className="container mt-4 py-3"
+              style={{ position: "relative", zIndex: 1 }}
+            >
               <div className="eventslug-bg rounded-5" />
               <div className="eventslug-banner mb-4 rounded-5">
-                <img
-                  src={event.image}
-                  alt={event.eventName}
-                  className="eventslug-banner__img rounded-5"
-                />
+                <picture>
+                  <source
+                    media="(max-width: 768px)"
+                    srcSet={event.image.mobile}
+                  />
+                  <img
+                    src={event.image.desktop}
+                    alt="hero-fold"
+                    className="eventslug-banner__img rounded-5 img-fluid"
+                  />
+                </picture>
                 <div className="eventslug-banner__shade" />
               </div>
               {/* CONTENT: description below */}
               <div className="row justify-content-center">
-                <div className="col-12 col-lg-9 col-xl-8" style={{zIndex:3}}>
+                <div className="col-12 col-lg-9 col-xl-8" style={{ zIndex: 3 }}>
                   <div className="px-4 mt-4">
                     <div className="mb-3">
                       <div className="eventslug-meta__row mb-2">

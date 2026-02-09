@@ -22,27 +22,27 @@ const weeklyEvents = [
   {
     tag: "Monday",
     href: "/events/monday", // redirect to home
-    image: "/home/event1.jpg",
+    image: "/home/event1M.jpg",
   },
   {
     tag: "Wednesday",
     href: "/events/wednesday",
-    image: "/home/event2.png",
+    image: "/home/event2M.png",
   },
   {
     tag: "Thursday",
     href: "/events/thursday",
-    image: "/home/event3.png",
+    image: "/home/event3M.png",
   },
   {
     tag: "Friday",
     href: "/events/friday",
-    image: "/home/event4.png",
+    image: "/home/event4M.png",
   },
   {
     tag: "Saturday",
     href: "/events/saturday",
-    image: "/home/event5.png",
+    image: "/home/event5M.png",
   },
 ];
 

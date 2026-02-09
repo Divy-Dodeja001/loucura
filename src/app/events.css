@@ -320,7 +320,6 @@
   position: relative;
   z-index: 1;
   width: 100%;
-  height: min(62vh, 540px);
   overflow: hidden;
 }
 
