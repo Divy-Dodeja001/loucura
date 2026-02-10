@@ -219,8 +219,8 @@ const page = () => {
                       {/* Body */}
                       <div className="event-body">
                         <div className="event-top">
-                          <div className="event-date">
-                            <div className="event-date__dow">{ev.day}</div>
+                          <div className="event-date p-2 text-center">
+                            {/* <div className="event-date__dow">{ev.day}</div> */}
                             <div className="event-date__text">
                               {ev.dateText}
                             </div>

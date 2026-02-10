@@ -151,7 +151,6 @@
 /* Date block (visual hierarchy) */
 .event-date {
   border-radius: 18px;
-  padding: 12px 10px;
   background: rgba(255, 255, 255, 0.12);
   border: 1px solid rgba(255, 255, 255, 0.16);
 }
@@ -163,7 +162,7 @@
 }
 
 .event-date__text {
-  font-size: 12px;
+  font-size: 14px;
   margin-top: 2px;
   color: rgba(255, 255, 255, 0.75);
 }
