@@ -295,7 +295,7 @@ export default function HomePage() {
 
         {/* INSTA POSTS*/}
         <section className="py-5 my-lg-3">
-          <h2 className="text-center mb-3">CHEK US OUT ON SOCIAL MEDIA</h2>
+          <h2 className="text-center mb-3">CHECK US OUT ON SOCIAL MEDIA</h2>
           <a
             className="text-light text-center d-block mb-5"
             href="https://www.instagram.com/loucurabarandclub"
