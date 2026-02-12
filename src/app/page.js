@@ -10,6 +10,7 @@ import { motion } from "framer-motion";
 import "./page.css";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import { useEffect, useState } from "react";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -65,6 +66,21 @@ const zoomFade = {
 };
 
 export default function HomePage() {
+  const [instaPosts, setInstaPosts] = useState([]);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const res = await fetch("/api/instagram");
+        const data = await res.json();
+        setInstaPosts(data.posts || []);
+      } catch (err) {
+        console.error("Failed to fetch posts:", err);
+      }
+    };
+
+    fetchPosts();
+  }, []);
   return (
     <main className="loucura-page">
       <div className="events-bg" />
@@ -144,7 +160,7 @@ export default function HomePage() {
             loop={true}
             speed={1500}
             autoplay={{
-              delay: 2000, // 2 seconds
+              delay: 2500, // 2 seconds
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
@@ -229,7 +245,7 @@ export default function HomePage() {
             spaceBetween={16}
             loop={true}
             autoplay={{
-              delay: 2000, // 2 seconds
+              delay: 2500, // 2 seconds
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
@@ -237,6 +253,7 @@ export default function HomePage() {
             breakpoints={{
               0: { slidesPerView: 1.3 },
               992: { slidesPerView: 1.5, centeredSlides: true },
+              1920: { slidesPerView: 1.9, centeredSlides: true },
             }}
           >
             {experienceImages.map((src, index) => (
@@ -275,6 +292,58 @@ export default function HomePage() {
         >
           <img src="/Vector3.png" className="img-fluid" />
         </div> */}
+
+        {/* INSTA POSTS*/}
+        <section className="py-5 my-lg-3">
+          <h2 className="text-center mb-3">CHEK US OUT ON SOCIAL MEDIA</h2>
+          <a
+            className="text-light text-center d-block mb-5"
+            href="https://www.instagram.com/loucurabarandclub"
+          >
+            @loucurabarandclub
+          </a>
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            pagination={{ clickable: true }}
+            navigation
+            spaceBetween={16}
+            loop={true}
+            speed={1500}
+            autoplay={{
+              delay: 2500, // 2 seconds
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            breakpoints={{
+              0: { slidesPerView: 1.15, centeredSlides: true },
+              576: { slidesPerView: 2.1 },
+              992: { slidesPerView: 3.1 },
+              1400: { slidesPerView: 3.3 },
+              1920: { slidesPerView: 4.1 },
+            }}
+          >
+            {instaPosts.slice(0, 6).map((post, index) => (
+              <SwiperSlide className="pb-5" key={index}>
+                <motion.div
+                  className="ff-card position-relative"
+                  variants={fadeUp}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }}
+                  transition={{ duration: 0.5, ease: "easeOut" }}
+                >
+                  <Link href={post.permalink} target="_blank">
+                    <img
+                      className="rounded-5 mb-3 insta-card"
+                      src={post.thumbnail_url || post.media_url}
+                      alt="post"
+                    />
+                  </Link>
+                </motion.div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </section>
 
         {/* FIND US */}
         <section className="container py-5">

@@ -21,7 +21,11 @@ const Footer = () => {
             </div>
 
             <div className="d-flex gap-3 mt-3">
-              <Link href="/" className="text-white" aria-label="Instagram">
+              <Link
+                href="https://www.instagram.com/loucurabarandclub"
+                className="text-white"
+                aria-label="Instagram"
+              >
                 <Icon icon="mdi:instagram" width="22" height="22" />
               </Link>
               <Link href="/" className="text-white" aria-label="TikTok">

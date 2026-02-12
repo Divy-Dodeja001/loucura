@@ -64,7 +64,6 @@
   opacity: 0.9;
 }
 
-
 @media (max-width: 600px) {
   .hero-section {
     h1 {
@@ -95,7 +94,19 @@
   }
 
   .section-title__text {
-  gap: 6px; /* space between dots and text */
-}
+    gap: 6px; /* space between dots and text */
+  }
 }
 
+.insta-card {
+  width: 400px;
+  height: 520px;
+}
+
+
+@media (max-width: 800px) {
+  .insta-card {
+    width: 320px;
+    height: 430px;
+  }
+}
