@@ -100,8 +100,8 @@ export default function HomePage() {
         </div> */}
 
         {/* HERO */}
-        <section className="container hero-section pt-4 pb-5 mb-3">
-          <div className="text-center py-5">
+        <section className="hero-section pb-5 mb-3">
+          {/* <div className="text-center py-5">
             <div className="text-light mb-3 mb-md-4 section-title">
               <p
                 className="section-title__text m-0"
@@ -113,38 +113,32 @@ export default function HomePage() {
             <h1 className="mb-md-3 mb-2 font-blaster text-light">
               FEEL THE PASSION
             </h1>
-            <div className="text-light mb-4">
-              <p style={{ fontSize: "18px" }}>on Lisbon&apos;s pink street</p>
-            </div>
 
             <div className="d-flex justify-content-center gap-2 flex-wrap">
               <Link href="/" className="rounded-pill cta-btn">
                 Buy Tickets
               </Link>
             </div>
-          </div>
+          </div> */}
 
           {/* Big hero image */}
           <div>
-            <motion.div
-              variants={zoomFade}
-              initial="hidden"
-              whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
+            <video
+              autoPlay
+              muted
+              playsInline
+              loop
+              className="w-100"
             >
-              <picture>
-                <source
-                  media="(max-width: 768px)"
-                  srcSet="/home/HeroMobile.jpg"
-                />
-                <img
-                  src="/home/HeroDesktop.jpg"
-                  alt="hero"
-                  className="w-100 ff-img ff-card"
-                />
-              </picture>
-            </motion.div>
+              <source
+                src="/home/heroVideoMobile.webm"
+                media="(max-width: 768px)"
+              />
+              <source
+                src="/home/heroVideoDesktop.webm"
+                media="(min-width: 769px)"
+              />
+            </video>
           </div>
         </section>
 
