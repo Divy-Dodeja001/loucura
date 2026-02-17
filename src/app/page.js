@@ -102,7 +102,7 @@ export default function HomePage() {
         {/* HERO */}
         <section className="hero-section pb-5 mb-3 position-relative">
           {/* Overlay for the text */}
-          <div className="position-absolute w-100 h-100" style={{zIndex:2}}>
+          <div className="position-absolute w-100 h-100" style={{ zIndex: 2 }}>
             <div className="h-100 d-flex justify-content-center w-100 align-items-center">
               <div className="pb-5 mb-5 px-3 text-center">
                 <h1
@@ -248,7 +248,8 @@ export default function HomePage() {
             breakpoints={{
               0: { slidesPerView: 1.3 },
               992: { slidesPerView: 1.5, centeredSlides: true },
-              1920: { slidesPerView: 1.9, centeredSlides: true },
+              1600: { slidesPerView: 1.9, centeredSlides: true },
+              1920: { slidesPerView: 2.5, centeredSlides: true },
             }}
           >
             {experienceImages.map((src, index) => (
