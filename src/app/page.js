@@ -106,11 +106,16 @@ export default function HomePage() {
             <div className="h-100 d-flex justify-content-center w-100 align-items-center">
               <div className="pb-5 mb-5 px-3 text-center">
                 <h1
-                  className="font-blaster text-light"
+                  className="font-blaster text-light mb-1"
                   style={{ letterSpacing: "0.1em" }}
                 >
                   feel the passion
                 </h1>
+                <div className="text-light mb-4 sub-text-hero">
+                  <p>
+                    on Lisbon&apos;s pink street
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -249,7 +254,7 @@ export default function HomePage() {
               0: { slidesPerView: 1.3 },
               992: { slidesPerView: 1.5, centeredSlides: true },
               1600: { slidesPerView: 1.9, centeredSlides: true },
-              1920: { slidesPerView: 2.5, centeredSlides: true },
+              1920: { slidesPerView: 2.4, centeredSlides: true },
             }}
           >
             {experienceImages.map((src, index) => (
