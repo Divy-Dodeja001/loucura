@@ -21,7 +21,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="py-3 position-sticky"
+      className="py-3 position-sticky font-manrope"
       style={{
         top: 0,
         zIndex: 100,

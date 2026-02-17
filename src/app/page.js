@@ -100,36 +100,20 @@ export default function HomePage() {
         </div> */}
 
         {/* HERO */}
-        <section className="hero-section pb-5 mb-3">
-          {/* <div className="text-center py-5">
-            <div className="text-light mb-3 mb-md-4 section-title">
-              <p
-                className="section-title__text m-0"
-                style={{ fontSize: "18px" }}
-              >
-                LOUCURA BAR AND CLUB
-              </p>
+        <section className="hero-section pb-5 mb-3 position-relative">
+          <div className="position-absolute w-100 h-100">
+            <div className="h-100 d-flex justify-content-center w-100 align-items-center">
+              <div className="pb-5 mb-5 px-3 text-center">
+                <h1 className="font-blaster text-light" style={{letterSpacing:"0.1em"}}>
+                  feel the passion
+                </h1>
+              </div>
             </div>
-            <h1 className="mb-md-3 mb-2 font-blaster text-light">
-              FEEL THE PASSION
-            </h1>
-
-            <div className="d-flex justify-content-center gap-2 flex-wrap">
-              <Link href="/" className="rounded-pill cta-btn">
-                Buy Tickets
-              </Link>
-            </div>
-          </div> */}
+          </div>
 
           {/* Big hero image */}
           <div>
-            <video
-              autoPlay
-              muted
-              playsInline
-              loop
-              className="w-100"
-            >
+            <video autoPlay muted playsInline loop className="w-100">
               <source
                 src="/home/heroVideoMobile.webm"
                 media="(max-width: 768px)"
@@ -144,7 +128,7 @@ export default function HomePage() {
 
         {/* WEEKLY EVENTS */}
         <section className="py-5 my-lg-3">
-          <h2 className="text-center mb-5">WEEKLY EVENTS</h2>
+          <h2 className="text-center mb-5">weekly events</h2>
 
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -231,7 +215,7 @@ export default function HomePage() {
 
         {/* THE EXPERIENCE */}
         <section className="py-5 my-3">
-          <h2 className=" text-center mb-5">THE EXPERIENCE</h2>
+          <h2 className=" text-center mb-5">the experience</h2>
 
           <Swiper
             modules={[Pagination, Autoplay]}
@@ -289,7 +273,7 @@ export default function HomePage() {
 
         {/* INSTA POSTS*/}
         <section className="py-5 my-lg-3">
-          <h2 className="text-center mb-3">CHECK US OUT ON SOCIAL MEDIA</h2>
+          <h2 className="text-center mb-3">check us out on social media</h2>
           <a
             className="text-light text-center d-block mb-5"
             href="https://www.instagram.com/loucurabarandclub"
@@ -356,7 +340,7 @@ export default function HomePage() {
               />
             </div>
             <div className="col-12 col-md-6 px-0">
-              <h2 className=" mb-4 text-center">FIND US</h2>
+              <h2 className=" mb-4 text-center">find us</h2>
               <div className="text-light text-center">
                 <p style={{ fontSize: "18px" }}>
                   R Nova do Carvalho 24, Lisbon <br />

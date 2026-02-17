@@ -35,6 +35,10 @@ body {
   font-family: var(--font-ltwave), serif;
 }
 
+.font-manrope {
+  font-family: var(--font-manrope), serif;
+}
+
 body {
   font-family: var(--font-ltwave);
 }

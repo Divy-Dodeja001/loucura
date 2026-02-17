@@ -4,6 +4,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import localFont from "next/font/local";
 
+import { Manrope } from "next/font/google";
+
+const manrope = Manrope({
+  subsets: ["latin"], // choose character sets
+  variable: "--font-manrope", // optional CSS variable
+  weight: ["400", "500", "600", "700"], // pick the weights you need
+});
 
 const blaster = localFont({
   src: "./fonts/blaster.otf",
@@ -22,7 +29,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${ltwave.variable} ${blaster.variable}`}>
+    <html lang="en" className={`${ltwave.variable} ${blaster.variable} ${manrope.variable}`}>
       <head>
         {/* Bootstrap CSS */}
         <link
