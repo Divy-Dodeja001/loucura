@@ -101,29 +101,46 @@ export default function HomePage() {
 
         {/* HERO */}
         <section className="hero-section pb-5 mb-3 position-relative">
-          <div className="position-absolute w-100 h-100">
+          {/* Overlay for the text */}
+          <div className="position-absolute w-100 h-100" style={{zIndex:2}}>
             <div className="h-100 d-flex justify-content-center w-100 align-items-center">
               <div className="pb-5 mb-5 px-3 text-center">
-                <h1 className="font-blaster text-light" style={{letterSpacing:"0.1em"}}>
+                <h1
+                  className="font-blaster text-light"
+                  style={{ letterSpacing: "0.1em" }}
+                >
                   feel the passion
                 </h1>
               </div>
             </div>
           </div>
 
-          {/* Big hero image */}
-          <div>
-            <video autoPlay muted playsInline loop className="w-100">
-              <source
-                src="/home/heroVideoMobile.webm"
-                media="(max-width: 768px)"
-              />
-              <source
-                src="/home/heroVideoDesktop.webm"
-                media="(min-width: 769px)"
-              />
-            </video>
-          </div>
+          {/* Hero video section */}
+          <motion.div
+            className="w-100"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+          >
+            <div className="hero-video-container">
+              <video
+                autoPlay
+                muted
+                playsInline
+                loop
+                className="w-100 hero-video"
+              >
+                <source
+                  src="/home/heroVideoMobile.webm"
+                  media="(max-width: 768px)"
+                />
+                <source
+                  src="/home/heroVideoDesktop.webm"
+                  media="(min-width: 769px)"
+                />
+              </video>
+            </div>
+          </motion.div>
         </section>
 
         {/* WEEKLY EVENTS */}
