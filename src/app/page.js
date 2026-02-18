@@ -47,6 +47,26 @@ const weeklyEvents = [
   },
 ];
 
+
+const order = [
+  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+];
+
+// Get current weekday in Lisbon timezone
+const today = new Intl.DateTimeFormat("en-US", {
+  weekday: "long",
+  timeZone: "Europe/Lisbon"
+}).format(new Date());
+
+// Sort starting from today
+const sortedEvents = weeklyEvents.sort((a, b) => {
+  const todayIndex = order.indexOf(today);
+  const aIndex = (order.indexOf(a.tag) - todayIndex + 7) % 7;
+  const bIndex = (order.indexOf(b.tag) - todayIndex + 7) % 7;
+  return aIndex - bIndex;
+});
+
+
 const experienceImages = [
   { desktop: "home/lifestyle2.jpg", mobile: "home/lifestyleM2.jpg" },
   { desktop: "home/lifestyle3.jpg", mobile: "home/lifestyleM3.jpg" },
@@ -160,7 +180,7 @@ export default function HomePage() {
             loop={true}
             speed={1500}
             autoplay={{
-              delay: 2500, // 2 seconds
+              delay: 3000, // 2 seconds
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
@@ -170,7 +190,7 @@ export default function HomePage() {
               992: { slidesPerView: 3.3 },
             }}
           >
-            {weeklyEvents.map((card, idx) => (
+            {sortedEvents.map((card, idx) => (
               <SwiperSlide className="pb-5" key={`${card.image}-${idx}`}>
                 <EventTile card={card} />
               </SwiperSlide>
@@ -367,7 +387,7 @@ export default function HomePage() {
               <div className="text-light text-center">
                 <p style={{ fontSize: "18px" }}>
                   R Nova do Carvalho 24, Lisbon <br />
-                  Fri–Sun: 12 AM – 6 AM
+                  Tuesday - Monday: 8 PM – 6 AM
                 </p>
               </div>
               {/* redirect to home */}

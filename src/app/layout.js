@@ -4,11 +4,11 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import localFont from "next/font/local";
 
-import { Manrope } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const manrope = Manrope({
+const poppins = Poppins({
   subsets: ["latin"], // choose character sets
-  variable: "--font-manrope", // optional CSS variable
+  variable: "--font-poppins", // optional CSS variable
   weight: ["400", "500", "600", "700"], // pick the weights you need
 });
 
@@ -29,7 +29,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${ltwave.variable} ${blaster.variable} ${manrope.variable}`}>
+    <html lang="en" className={`${ltwave.variable} ${blaster.variable} ${poppins.variable}`}>
       <head>
         {/* Bootstrap CSS */}
         <link
