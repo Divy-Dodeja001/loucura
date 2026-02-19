@@ -4,12 +4,13 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import localFont from "next/font/local";
 
-import { Poppins } from "next/font/google";
+import { Bebas_Neue } from "next/font/google";
 
-const poppins = Poppins({
+
+const bebasneue = Bebas_Neue({
   subsets: ["latin"], // choose character sets
-  variable: "--font-poppins", // optional CSS variable
-  weight: ["400", "500", "600", "700"], // pick the weights you need
+  variable: "--font-bebasneue", // optional CSS variable
+  weight: ["400"], // pick the weights you need
 });
 
 const blaster = localFont({
@@ -29,7 +30,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${ltwave.variable} ${blaster.variable} ${poppins.variable}`}>
+    <html lang="en" className={`${ltwave.variable} ${blaster.variable} ${bebasneue.variable}`}>
       <head>
         {/* Bootstrap CSS */}
         <link

@@ -129,7 +129,7 @@
 @media (max-width: 768px) {
   .hero-video-container {
     width: 100%;
-    height: 430px; /* Fixed height for mobile */
+    height: 710px
   }
 }
 

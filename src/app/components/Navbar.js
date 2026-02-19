@@ -11,7 +11,9 @@ const Navbar = () => {
     const el = document.getElementById("mobileNav");
     if (el) {
       const bs = window.bootstrap;
-      const instance = bs?.Offcanvas?.getInstance(el) || bs?.Offcanvas?.getOrCreateInstance(el);
+      const instance =
+        bs?.Offcanvas?.getInstance(el) ||
+        bs?.Offcanvas?.getOrCreateInstance(el);
       instance?.hide();
     }
 
@@ -21,7 +23,7 @@ const Navbar = () => {
 
   return (
     <header
-      className="py-3 position-sticky font-poppins"
+      className="py-3 position-fixed font-bebasneue w-100"
       style={{
         top: 0,
         zIndex: 100,
@@ -37,16 +39,32 @@ const Navbar = () => {
         {/* Desktop */}
         <div className="d-none d-md-block">
           <div className="d-flex align-items-center" style={{ gap: "2em" }}>
-            <Link href="/" className="text-light nav-link px-0" style={{ fontWeight: 500 }}>
+            <Link
+              href="/"
+              className="nav-link px-0 fw-bold"
+              style={{ letterSpacing: "0.15em", fontSize: "1.2em" }}
+            >
               Home
             </Link>
-            <Link href="/events" className="text-light nav-link px-0" style={{ fontWeight: 500 }}>
+            <Link
+              href="/events"
+              className="nav-link px-0 fw-bold"
+              style={{ letterSpacing: "0.15em", fontSize: "1.2em" }}
+            >
               Events
             </Link>
-            <Link href="/#about" className="text-light nav-link px-0" style={{ fontWeight: 500 }}>
+            <Link
+              href="/#about"
+              className="nav-link px-0 fw-bold"
+              style={{ letterSpacing: "0.15em", fontSize: "1.2em" }}
+            >
               About
             </Link>
-            <Link href="/" className="btn cta-btn rounded-pill" style={{ fontWeight: 500 }}>
+            <Link
+              href="/"
+              className="btn cta-btn-nav rounded-pill"
+              style={{ letterSpacing: "0.15em", fontSize: "1.1em" }}
+            >
               Book Now
             </Link>
           </div>
@@ -84,10 +102,8 @@ const Navbar = () => {
           backdropFilter: "blur(16px)",
         }}
       >
-        <div className="offcanvas-header">
-          <h5 className="offcanvas-title" id="mobileNavLabel" style={{ letterSpacing: "0.08em" }}>
-            MENU
-          </h5>
+        <div className="offcanvas-header px-4">
+          <img src="/logo.png" alt="Logo" style={{ height: 34 }} />
           <button
             type="button"
             className="btn-close btn-close-white"
@@ -98,15 +114,27 @@ const Navbar = () => {
 
         <div className="offcanvas-body">
           <div className="d-flex flex-column gap-3">
-            <div type="button" className="mobile-nav-item text-start" onClick={() => goTo("/")}>
+            <div
+              type="button"
+              className="mobile-nav-item text-start"
+              onClick={() => goTo("/")}
+            >
               Home
             </div>
 
-            <div type="button" className="mobile-nav-item text-start" onClick={() => goTo("/events")}>
+            <div
+              type="button"
+              className="mobile-nav-item text-start"
+              onClick={() => goTo("/events")}
+            >
               Events
             </div>
 
-            <div type="button" className="btn cta-btn rounded-pill w-100 mt-2" style={{ fontWeight: 600 }} onClick={() => goTo("/")}>
+            <div
+              type="button"
+              className="btn cta-btn-nav rounded-pill w-100 mt-2"
+              onClick={() => goTo("/")}
+            >
               Book Now
             </div>
           </div>

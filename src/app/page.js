@@ -398,7 +398,7 @@ export default function HomePage() {
                   className="btn cta-btn rounded-pill"
                   style={{ fontWeight: 500 }}
                 >
-                  Directions
+                  Get Directions
                 </Link>
               </div>
             </div>

@@ -35,18 +35,18 @@ body {
   font-family: var(--font-ltwave), serif;
 }
 
-.font-poppins {
-  font-family: var(--font-poppins), serif;
+.font-bebasneue {
+  font-family: var(--font-bebasneue), serif;
 }
 
 body {
   font-family: var(--font-ltwave);
 }
 
-h2{
+h2 {
   font-family: var(--font-blaster);
-  font-size: 40px!important;
-  color: #fff!important;
+  font-size: 40px !important;
+  color: #fff !important;
 }
 
 /* app/globals.css */
@@ -81,8 +81,16 @@ body {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(1200px 600px at 20% 15%, rgba(255, 79, 216, 0.18), transparent 60%),
-    radial-gradient(900px 600px at 80% 35%, rgba(123, 60, 255, 0.18), transparent 60%),
+    radial-gradient(
+      1200px 600px at 20% 15%,
+      rgba(255, 79, 216, 0.18),
+      transparent 60%
+    ),
+    radial-gradient(
+      900px 600px at 80% 35%,
+      rgba(123, 60, 255, 0.18),
+      transparent 60%
+    ),
     linear-gradient(180deg, var(--bg-1), var(--bg-2));
 }
 
@@ -151,14 +159,14 @@ body {
   color: rgba(255, 255, 255, 0.7);
 }
 
- .swiper-pagination-bullet {
-  border-radius: 999px!important; /* pill shape */
-  background-color: #444444!important;
-  opacity: 1!important; /* override swiper’s fading */
-  transition: all 0.3s ease!important;
+.swiper-pagination-bullet {
+  border-radius: 999px !important; /* pill shape */
+  background-color: #444444 !important;
+  opacity: 1 !important; /* override swiper’s fading */
+  transition: all 0.3s ease !important;
 }
- .swiper-pagination-bullet-active {
-  background-color: white!important; /* full white */
+.swiper-pagination-bullet-active {
+  background-color: white !important; /* full white */
 }
 
 .events-bg {
@@ -166,10 +174,26 @@ body {
   inset: 0;
   z-index: 0;
   background:
-    radial-gradient(900px 560px at 10% 10%, rgba(75, 16, 144, 0.4), transparent 90%),
-    radial-gradient(820px 540px at 78% 30%, rgba(241, 0, 129, 0.22), transparent 90%),
-    radial-gradient(900px 820px at 10% 55%, rgba(254, 138, 53, 0.2), transparent 90%),
-    radial-gradient(760px 520px at 70% 80%, rgba(254, 106, 94, 0.3), transparent 90%),
+    radial-gradient(
+      900px 560px at 10% 10%,
+      rgba(75, 16, 144, 0.4),
+      transparent 90%
+    ),
+    radial-gradient(
+      820px 540px at 78% 30%,
+      rgba(241, 0, 129, 0.22),
+      transparent 90%
+    ),
+    radial-gradient(
+      900px 820px at 10% 55%,
+      rgba(254, 138, 53, 0.2),
+      transparent 90%
+    ),
+    radial-gradient(
+      760px 520px at 70% 80%,
+      rgba(254, 106, 94, 0.3),
+      transparent 90%
+    ),
     linear-gradient(180deg, #0b0712 0%, #020203 100%);
   filter: saturate(1.05);
 }
@@ -187,7 +211,15 @@ header {
   background-color: white !important;
   color: black !important;
   text-decoration: none;
-  border: 1px solid white!important;
+  border: 1px solid white !important;
+}
+
+.cta-btn-nav {
+  padding: 10px 30px !important;
+  font-size: 18px;
+  background-color: #4b1090 !important;
+  color: white !important;
+  text-decoration: none;
 }
 
 .cta-btn:hover {
@@ -195,16 +227,24 @@ header {
   color: white !important;
 }
 
-a{
-  color: inherit!important;
-  text-decoration: none!important;
+.cta-btn-nav:hover {
+  background-color: #fe6a5e !important;
+  color : white !important;
 }
 
-.nav-link:hover{
-  font-weight: 800;
-  text-decoration: underline!important;
+a {
+  color: inherit !important;
+  text-decoration: none !important;
 }
 
+.nav-link {
+  color: #f10081 !important;
+}
+
+.nav-link:hover {
+  text-decoration: underline !important;
+  color: #fe6a5e !important;
+}
 
 /* White hamburger icon */
 .nav-hamburger {
@@ -212,7 +252,10 @@ a{
   width: 22px;
   height: 14px;
   position: relative;
-  background: linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92));
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.92),
+    rgba(255, 255, 255, 0.92)
+  );
   background-size: 22px 2px;
   background-repeat: no-repeat;
   background-position: center;
@@ -225,24 +268,26 @@ a{
   left: 0;
   width: 22px;
   height: 2px;
-  background: rgba(255,255,255,0.92);
+  background: rgba(255, 255, 255, 0.92);
   border-radius: 999px;
 }
 
-.nav-hamburger::before { top: 2px; }
-.nav-hamburger::after { bottom: 2px; }
+.nav-hamburger::before {
+  top: 2px;
+}
+.nav-hamburger::after {
+  bottom: 2px;
+}
 
 /* Mobile nav links */
 .mobile-nav-item {
   display: block;
   padding: 12px 12px;
   text-decoration: none;
-  color: rgba(255,255,255,0.92);
-  font-weight: 600;
-  transition: transform 0.15s ease, background 0.2s ease;
-}
+  color: #f10081 !important;
+  transition:
+    transform 0.15s ease,
+    background 0.2s ease;
 
-.mobile-nav-item:hover {
-  transform: translateY(-1px);
-  background: rgba(255,255,255,0.10);
+  font-size: 1.1em;
 }
