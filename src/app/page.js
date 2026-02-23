@@ -46,15 +46,20 @@ const weeklyEvents = [
   },
 ];
 
-
 const order = [
-  "Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"
+  "Sunday",
+  "Monday",
+  "Tuesday",
+  "Wednesday",
+  "Thursday",
+  "Friday",
+  "Saturday",
 ];
 
 // Get current weekday in Lisbon timezone
 const today = new Intl.DateTimeFormat("en-US", {
   weekday: "long",
-  timeZone: "Europe/Lisbon"
+  timeZone: "Europe/Lisbon",
 }).format(new Date());
 
 // Sort starting from today
@@ -64,7 +69,6 @@ const sortedEvents = weeklyEvents.sort((a, b) => {
   const bIndex = (order.indexOf(b.tag) - todayIndex + 7) % 7;
   return aIndex - bIndex;
 });
-
 
 const experienceImages = [
   { desktop: "home/lifestyle2.jpg", mobile: "home/lifestyleM2.jpg" },
@@ -131,9 +135,7 @@ export default function HomePage() {
                   feel the passion
                 </h1>
                 <div className="text-light mb-4 sub-text-hero">
-                  <p>
-                    on Lisbon&apos;s pink street
-                  </p>
+                  <p>on Lisbon&apos;s pink street</p>
                 </div>
               </div>
             </div>
@@ -209,23 +211,29 @@ export default function HomePage() {
               </div>
 
               <p
-                className="text-light px-3 mb-3"
-                style={{ maxWidth: 760, margin: "0 auto", fontSize: "1.3em" }}
+                className="text-light mb-3"
+                style={{ maxWidth: 760, margin: "0 auto", fontSize: "1.2em" }}
               >
-                Located in the heart of Pink Street, every night offers
-                something fresh at Loucura. Curated events, standout artists,
-                and DJs who set the perfect rhythm.
+                In the heart of Lisbon’s iconic Pink Street, Loucura Bar is a
+                nightlife destination where music, energy, and atmosphere come
+                together to create unforgettable nights. Every night is
+                carefully shaped by standout DJs, curated moments, and a vibrant
+                crowd. It’s a space where music, atmosphere, and connection come
+                together. Signature cocktails, refined shisha, and an
+                unmistakable pulse create an experience that draws you in and
+                keeps you there.
               </p>
               <p
-                className="text-light px-3"
+                className="text-light"
                 style={{
                   maxWidth: 760,
                   margin: "0.75rem auto 0",
-                  fontSize: "1.3em",
+                  fontSize: "1.2em",
                 }}
               >
-                With refined drinks and inviting shisha nights, Loucura is where
-                Lisbon’s evenings feel electric.
+                Whether you’re dancing deep into the night, celebrating with
+                friends, or taking in the pulse of Pink Street, Loucura delivers
+                an experience that is electric, charged and unmistakably Lisbon.
               </p>
 
               <div className="mt-5">
