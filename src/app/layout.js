@@ -39,6 +39,7 @@ export default function RootLayout({ children }) {
           integrity=""
           crossOrigin="anonymous"
         />
+        <meta name="google-site-verification" content="VJgvVB7bfQKc5wJ35Ue6Xhft-2nn90LnX98EwtzkvCw" />
       </head>
       <body className="font-ltwave">
         {children}
